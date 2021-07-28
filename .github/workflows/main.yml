@@ -23,6 +23,11 @@ jobs:
         with:
           username: ${{ secrets.l_sturbin }}
           password: ${{ secrets.sturbin }}
+          
+      - 
+        name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
       -
         name: Build and push
         uses: docker/build-push-action@v2
